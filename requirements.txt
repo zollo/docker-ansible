@@ -1,8 +1,13 @@
-docker
+ansible>=2.10,<2.11
+pyvmomi
 pywinrm
 pywinrm[kerberos]
 pywinrm[credssp]
+pykerberos
 requests
+requests-credssp
+hvac
+docker
 ipaddress
 boto
 boto3
