@@ -1,0 +1,14 @@
+docker
+pywinrm
+pywinrm[kerberos]
+pywinrm[credssp]
+requests
+ipaddress
+boto
+boto3
+botocore
+pyvmomi
+git+https://github.com/vmware/vsphere-automation-sdk-python.git
+urllib3
+future
+netaddr
