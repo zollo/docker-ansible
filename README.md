@@ -10,39 +10,6 @@ All Ansible content is installed to the root user's folder (/root/.ansible) so t
 
 ## Content: Ansible Collections
 
-* ansible.netcommon
-* ansible.posix
-* ansible.windows
-* community.network
-* community.windows
-* community.vmware
-* community.aws
-* community.general
-* vmware.vmware_rest
-* f5networks.f5_modules
-* device42.d42
-* cloud.common
-
-## Content: Ansible Roles
-
-* geerlingguy.docker
-* geerlingguy.java
-* geerlingguy.pip
-* geerlingguy.repo-epel
-* geerlingguy.git
-* geerlingguy.awx
-* geerlingguy.nodejs
-* geerlingguy.ansible
-* geerlingguy.certbot
-* geerlingguy.redis
-* geerlingguy.nfs
-
-## Content: Python Modules
-
-* docker
-* pywinrm + kerberos/credssp
-* ipaddress
-* boto, boto3, botocore
-* pyvmomi, vsphere-automation-sdk-python
-* urllib3
-* future
+* Ansible 4.x Package
+* Ansible Roles (docker, java, redis, nfs, etc.)
+* Python Modules (pywinrm, boto, pyvmomi, etc.)
