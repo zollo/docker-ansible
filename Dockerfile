@@ -1,20 +1,15 @@
-FROM photon:3.0
+FROM ubuntu:20.04
 ARG USER=root
 
 # Copy Files
 COPY requirements.txt requirements.yml /
 
 # Configure/Install OS Packages
-RUN tdnf update -y && \
-    tdnf install build-essential e2fsprogs-devel openssl-devel \
-                 zlib-devel libtirpc-devel rpcsvc-proto-devel \
-                 protobuf-devel libgcc-devel glibc-devel git \
-                 sshpass wget unzip docker -y && \
-    tdnf install krb5-devel python3-devel python3 python3-pip -y && \
-    tdnf clean all
+RUN apt update && apt upgrade -y && \
+    apt install python3 python3-distutils curl -y && \
+    curl -o /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py && \
+    python3 /tmp/get-pip.py
 
 # Configure/Install Python Packages
-RUN pip3 install -U pip && \ 
-    pip3 install -U wheel setuptools && \
-    pip3 install -r /requirements.txt && \
+RUN pip3 install -r /requirements.txt && \
     ansible-galaxy install -r /requirements.yml

@@ -1,9 +1,8 @@
 name: CI
 
-# Controls when the workflow will run
 on:
   schedule:
-    - cron: '0 10 * * *'
+    - cron: '0 3 * * *'
   push:
     branches: [ main ]
   pull_request:
@@ -11,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-docker:
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU
@@ -32,4 +31,4 @@ jobs:
         with:
           file: Dockerfile
           push: true
-          tags: zollo/ansible:latest
+          tags: zollo/ansible-ci:latest
