@@ -9,6 +9,8 @@ RUN apt update && apt upgrade -y
 # Add Local User
 RUN useradd -U -m ansible
 
+RUN --mount=type=cache,target=/root/.cache/pip,from=pycache pip install -r requirements.txt
+
 # Configure/Install Python Packages
 RUN pip3 install wheel setuptools && \
     pip3 install -r /requirements.txt && \
