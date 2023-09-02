@@ -1,4 +1,4 @@
-ansible==4.*
+ansible==8.*
 pyvmomi
 pywinrm
 pywinrm[credssp]
@@ -9,7 +9,5 @@ ipaddress
 boto
 boto3
 botocore
-pyvmomi
-https://github.com/vmware/vsphere-automation-sdk-python/archive/refs/tags/v7.0.3.0.zip
 urllib3
 future
