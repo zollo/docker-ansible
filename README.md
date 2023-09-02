@@ -1,8 +1,10 @@
-# Ansible Base Container
+# Ansible Container
 
 ## zollo/ansible
 
-This Ansible base container is based on the Ubuntu 20.04 LTS base image and presents an easy way to get started with a project.
+This Ansible container is based on the Python 3.11 Debian base image.
+
+    docker pull ghcr.io/zollo/ansible:latest
 
 ## Structure
 
@@ -10,6 +12,6 @@ All Ansible content is installed to the root user's folder (/root/.ansible) so t
 
 ## Content
 
-* Ansible 4.x Package with Community Collections
-* Ansible Roles (docker, java, redis, nfs, etc.)
+* Ansible Community Distribution
+* Ansible Roles Defined in `requirements.yml`
 * Python Modules (pywinrm, boto, pyvmomi, etc.)
